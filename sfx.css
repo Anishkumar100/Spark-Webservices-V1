@@ -1,0 +1,512 @@
+.movie_card{
+    position: relative;
+    display: block;
+    width: 800px;
+    height: 450px;
+    margin: 100px auto; 
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.4s;
+    &:hover{
+      transform: scale(1.02);
+      transition: all 0.4s;
+    }
+    .info_section{
+      position: relative;
+      width: 100%;
+      height: 100%;
+        background-blend-mode: multiply;
+      z-index: 2;
+      border-radius: 10px;
+      .movie_header{
+        position: relative;
+        padding: 25px;
+        height: 40%;
+        h1{
+          color: #fff;
+          font-weight: 400;
+        }
+        h4{
+          color: #9ac7fa;
+          font-weight: 400;
+        }
+        .minutes{
+          display: inline-block;
+          margin-top: 10px;
+          color: #fff;
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px solid rgba(255,255,255,0.13);
+        }
+        .type{
+          display: inline-block;
+          color: #cee4fd;
+          margin-left: 10px;
+        }
+        .locandina{
+          position: relative;
+          float: left;
+          margin-right: 20px;
+          height: 120px;
+          box-shadow: 0 0 20px -10px rgba(0,0,0,0.5);
+        }
+      }
+      .movie_desc{
+  
+        
+        height: 50%;
+        .text{
+            padding-top: 45px;
+            padding-left:25px;
+            text-align: start;
+            margin-right:10px;
+          color: #cfd6e1;
+        }
+      }
+      .movie_social{
+        height: 10%;
+        padding-left: 15px;
+        padding-bottom: 20px;
+        ul{
+          list-style: none;
+          padding: 0px;
+          display: flex;
+          justify-content: start;
+          margin-top: 15px;
+          margin-bottom:10px;
+          li{
+            display: inline-block;
+            color: rgba(255,255,255,0.4);
+            transition: color 0.3s;
+            transition-delay: 0.15s;
+            margin: -25px 10px;
+            &:hover{
+              transition: color 0.3s;
+              color: rgba(255,255,255,0.8);
+            }
+          
+          }
+        }
+      }
+    }
+    .blur_back{
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      height: 100%; right: 0;
+      background-size: cover;
+      border-radius: 11px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .movie_header{
+      width: 60%;
+    }
+    
+    .movie_desc{
+      width: 50%;
+    }
+    
+    .info_section{
+      background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
+    }
+    
+    .blur_back{
+      width: 80%;
+      background-position: -100% 10% !important;  
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .movie_card{
+      width: 95%;
+      margin: 70px auto; 
+      min-height: 350px;
+      height: auto;
+    }
+    
+    .blur_back{
+      width: 100%;
+      background-position: 50% 50% !important;  
+    }
+    
+    .movie_header{
+      width: 100%;
+      margin-top: 85px;
+    }
+    
+    .movie_desc{
+      width: 100%;
+    }
+    
+    .info_section{
+      background: linear-gradient(to top, rgb(20, 20, 19) 50%, transparent 100%);
+      display: inline-grid;
+    }
+  }
+  
+  
+  #bright{
+    box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+    &:hover{
+      box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+    }
+  }
+  
+  .bright_back{
+    background: url("https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg");
+  }
+  
+  #tomb{
+    box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);
+    &:hover{
+      box-shadow: 0px 0px 120px -55px rgba(19, 160, 134, 0.6);
+    }
+  }
+  
+  .tomb_back{
+    background: url("img/webdevbeta.png");
+  }
+  
+  #ave{
+    box-shadow: 0px 0px 150px -45px rgba(199,147,75, 0.7);
+    margin-bottom: 200px;
+    &:hover{
+      box-shadow: 0px 0px 120px -55px rgba(199,147,75, 0.7);
+    }
+  }
+  
+  .ave_back{
+      background: url("img/webdevsigma.png");
+  }
+
+  button:hover{cursor: pointer}
+  button {
+    background-color: tomato;
+   
+    position: relative;
+    border: 2px solid tomato;
+    padding: 15px 50px;
+    overflow: hidden;
+  }
+
+  /*button:before (attr data-hover)*/
+  button:hover:before{opacity: 1; transform: translate(0,0);}
+  button:before{
+    content: attr(data-hover);
+    position: absolute;
+    top: 1.1em; left: 0;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: .8em;
+    opacity: 0;
+    transform: translate(-100%,0);
+    transition: all .3s ease-in-out;
+  }
+    /*button div (button text before hover)*/
+    button:hover div{opacity: 0; transform: translate(100%,0)}
+    button div{
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800;
+      font-size: .8em;
+      transition: all .3s ease-in-out;
+    }
+
+
+
+
+
+
+.order:hover{cursor: pointer}
+  .order {
+    background-color: greenyellow;
+   
+    position: relative;
+    border: 2px solid greenyellow;
+    padding: 15px 50px;
+    overflow: hidden;
+  }
+
+  /*button:before (attr data-hover)*/
+  .order:hover:before{opacity: 1; transform: translate(0,0);}
+  .order:before{
+    content: attr(data-hover);
+    position: absolute;
+    top: 1.1em; left: 0;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: .8em;
+    opacity: 0;
+    transform: translate(-100%,0);
+    transition: all .3s ease-in-out;
+  }
+    /*button div (button text before hover)*/
+    .order:hover div{opacity: 0; transform: translate(100%,0)}
+    .order div{
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800;
+      font-size: .8em;
+      transition: all .3s ease-in-out;
+    }
+
+
+   
+    #design1st {
+      background-color: tomato;
+      width: 100%;
+      height: 300px;
+      color: wheat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  #design1sttext {
+      font-size: 60px;
+      text-align: center;
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+      #design1sttext {
+          font-size: 40px; /* Adjust the font size as needed */
+      }
+  }
+  
+  @media (max-width: 480px) {
+      #design1sttext {
+          font-size: 30px; /* Further adjust the font size for even smaller screens */
+      }
+  }
+  
+#cube-container {
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+ 
+ 
+  width: 100px;
+  height: 100px;
+  transition: 2s cubic-bezier(.68,-0.55,.27,1.55);
+  transform: translate(-50%, -50%);
+  .face {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border: 2px solid #ed3403;
+    background:#ed340370;
+    box-shadow: 0px 0px 150px #ed3403;
+    &.top {
+      transform: rotateX(90deg);
+      margin-top: -50%;
+    }
+    &.right {
+      transform: rotateY(90deg);
+      margin-left: 50%;
+    }
+    &.left {
+      transform: rotateY(-90deg);
+      margin-left: -50%;
+    }
+    &.bottom {
+      transform: rotateX(90deg);
+      margin-top: 50%;
+    }
+    &.back {
+      transform: translateZ(125px);
+    }
+    &.front {
+      transform: translateZ(-125px);
+    }
+  }
+  &:hover {
+    transform: rotateX(-25deg) rotateY(-40deg) translate(-50%, -50%);
+    transition: 2s cubic-bezier(.68,-0.55,.27,1.55);
+  }
+
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
+
+
+
+
+
+
+
+main {
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ol.gradient-list {
+  counter-reset: gradient-counter;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+}
+
+ol.gradient-list > li {
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  border: white 1px solid;
+  counter-increment: gradient-counter;
+  margin-top: 1rem;
+  min-height: 3rem;
+  padding: 1rem 1rem 1rem 3rem;
+  position: relative;
+  transition: all 0.3s ease-in-out; /* Smooth hover transition */
+
+  /* Before and after pseudo-elements */
+  &::before,
+  &::after {
+    border-radius: 1rem 1rem 0 1rem;
+    content: '';
+    height: 3rem;
+    left: -1rem;
+    overflow: hidden;
+    position: absolute;
+    top: -1rem;
+    width: 3rem;
+  }
+
+  &::before {
+    align-items: flex-end;
+    background-color: black;
+    content: counter(gradient-counter);
+    color: white;
+    display: flex;
+    font: 900 1.5em/1 'Montserrat';
+    justify-content: flex-end;
+    padding: 0.125em 0.25em;
+    z-index: 1;
+  }
+
+  /* Gradient for the background */
+  @for $i from 1 through 5 {
+    &:nth-child(10n+#{$i}):before {
+      background: linear-gradient(135deg, rgba($green, $i * 0.2) 0%, rgba($yellow, $i * 0.2) 100%);
+    }
+  }
+  @for $i from 6 through 10 {
+    &:nth-child(10n+#{$i}):before {
+      background: linear-gradient(135deg, rgba($green, 1 - (($i - 5) * 0.2)) 0%, rgba($yellow, 1 - (($i - 5) * 0.2)) 100%);
+    }
+  }
+
+  /* Hover effect */
+  &:hover {
+    transform: translateY(-5px) scale(1.05); /* Lift effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background change */
+
+    &::before {
+      background-color: white; /* Change counter background color */
+      color: black; /* Change counter text color */
+    }
+  }
+
+  + li {
+    margin-top: 2rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  #maincard {
+      padding: 10px !important; /* Force override */
+      margin: 0 auto !important;
+  }
+#cube-container
+{
+  display: none;
+}
+  #cardtext {
+      font-size: 14px !important;
+      line-height: 1.4 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #maincard {
+      padding: 5px !important;
+      margin: 0 auto !important;
+  }
+  #cube-container
+  {
+    display: none;
+  }
+  #cardtext {
+      font-size: 20px !important;
+     
+  }
+}
+
+#maincard {
+  padding: 20px !important;
+}
+
+
+#cardMainText {
+ text-align: start;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Hover effect */
+#cardMainText:hover {
+  color: tomato; /* Change text color on hover */
+
+}
+
+#design1st {
+
+  width: 100%;
+  height: 300px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+    background-color: rgb(10, 10, 10);
+  align-items: center;
+}
+
+#design1sttext {
+  font-size: 60px;
+  text-align: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover effect */
+#design1sttext:hover {
+  color: #ff5733; /* Change text color on hover */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  #design1sttext {
+      font-size: 40px; /* Adjust the font size as needed */
+  }
+}
+
+@media (max-width: 480px) {
+  #design1sttext {
+      font-size: 30px; /* Further adjust the font size for even smaller screens */
+  }
+}
+
+
+

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact Us</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Oswald:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link ref="stylesheet" href="contactus.css" />
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-grow text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg bg-secondary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn d-flex"
+      data-wow-delay="0.1s"
+    >
+      <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+        <img
+          src="spark logo.png"
+          class="mb-0 text-primary text-uppercase w-100"
+        />
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link active">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Services</a
+            >
+            <div class="dropdown-menu m-0">
+              <a href="portfolio.html" class="dropdown-item"
+                >Portfolio Websites</a
+              >
+              <a href="webdevelopment.html" class="dropdown-item"
+                >Custom Webdevelopment Projects</a
+              >
+              <a href="webdesigning.html" class="dropdown-item">Wedesigning</a>
+              <a href="videoEditing.html" class="dropdown-item"
+                >Video editing</a
+              >
+              <a href="creative.html" class="dropdown-item"
+                >Customised resumes & Creative designing</a
+              >
+              <a href="sfx.html" class="dropdown-item">SFX</a>
+            </div>
+          </div>
+        </div>
+        <a
+          href="contactus.html"
+          class="btn btn-primary rounded-0 py-2 px-lg-4 d-none d-lg-block"
+          >Appointment<i class="fa fa-arrow-right ms-3"></i
+        ></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div
+      class="container-fluid page-header py-5 mb-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center py-5">
+        <h1
+          class="display-3 text-white text-uppercase mb-3 animated slideInDown"
+        >
+          Contact
+        </h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb justify-content-center text-uppercase mb-0">
+            <li class="breadcrumb-item">
+              <a class="text-white" href="index.html">Home</a>
+            </li>
+
+            <li class="breadcrumb-item text-primary active" aria-current="page">
+              Contact
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+            <div class="bg-secondary p-5">
+              <p class="d-inline-block bg-dark text-primary py-1 px-4">
+                Contact Us
+              </p>
+              <h1 class="text-uppercase mb-4">
+                Mention Your Requirements Or Lets Simply Have A Chat
+              </h1>
+              <form onsubmit="handleSubmit(event)" id="contact-form">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control bg-transparent"
+                        id="name"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+                      />
+                      <label for="name">Your Name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control bg-transparent"
+                        id="email"
+                        placeholder="Your Email"
+                        required
+                      />
+                      <label for="email">Your Email</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input
+                      name="phone"
+                        type="text"
+                        class="form-control bg-transparent"
+                        id="subject"
+                        placeholder="Phone No"
+                        required
+                      />
+                      <label for="subject">Phone No</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control bg-transparent"
+                        placeholder="Leave a message here"
+                        name="message
+                        id="message"
+                        style="height: 100px"
+                        required
+                      ></textarea>
+                      <label for="message"
+                        >A Brief Description Of Your Expectations</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3" type="submit">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <div id="lol"></div>
+
+              <script>
+                function handleSubmit(event) {
+                  event.preventDefault(); // Prevent form from submitting and reloading the page
+
+                  var lol = document.getElementById("lol");
+                  var name = document.getElementById("name").value; // Get the name value
+
+                  var division = document.createElement("div");
+                  division.id = "replycard";
+                  division.style.width = "400px";
+                  division.style.padding = "30px";
+                  division.style.border = "1px solid #ddd";
+                  division.style.borderRadius = "12px";
+                  division.style.boxShadow = "0 8px 16px rgba(0, 0, 0, 0.2)";
+                  division.style.backgroundColor = "#ffffff";
+                  division.style.textAlign = "center";
+                  division.style.fontFamily =
+                    "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+                  division.style.position = "fixed";
+                  division.style.top = "50%";
+                  division.style.left = "50%";
+                  division.style.transform = "translate(-50%, -50%)";
+                  division.style.zIndex = "1000";
+
+                  var para = document.createElement("p");
+                  para.id = "replytext";
+                  para.innerHTML = `Greetings <span style="color:tomato; font-weight: bold;">${name}</span>,<br>Thank you for contacting us and sharing your thoughts. We have received your message, and our team will get back to you shortly.`;
+                  para.style.fontSize = "20px";
+                  para.style.color = "#333";
+                  para.style.lineHeight = "1.5";
+                  para.style.marginBottom = "20px";
+
+                  var button = document.createElement("button");
+                  button.textContent = "OK";
+                  button.id = "lolButton";
+                  button.style.display = "block";
+                  button.style.margin = "20px auto 0";
+                  button.style.padding = "12px 24px";
+                  button.style.border = "none";
+                  button.style.borderRadius = "8px";
+                  button.style.backgroundColor = "tomato";
+                  button.style.color = "#fff";
+                  button.style.cursor = "pointer";
+                  button.style.transition =
+                    "background-color 0.3s, transform 0.2s";
+                  button.style.fontSize = "18px";
+                  button.style.boxShadow = "0 4px 12px rgba(0, 123, 255, 0.3)";
+
+                  // Add hover effect to the button
+                  button.addEventListener("mouseover", function () {
+                    button.style.backgroundColor = "#e74c3c";
+                    button.style.transform = "scale(1.05)";
+                  });
+                  button.addEventListener("mouseout", function () {
+                    button.style.backgroundColor = "tomato";
+                    button.style.transform = "scale(1)";
+                  });
+
+                  // Add click event to the button to remove the popup
+                  button.addEventListener("click", function () {
+                    division.remove();
+                  });
+
+                  // Append the paragraph and button to the division
+                  division.appendChild(para);
+                  division.appendChild(button);
+
+                  // Append the division to the container with id "lol"
+                  lol.append(division);
+                }
+              </script>
+            </div>
+          </div>
+
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div class="h-100" style="min-height: 400px">
+              <iframe
+                class="google-map w-100 h-100"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                frameborder="0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+                style="
+                  filter: grayscale(100%) invert(92%) contrast(83%);
+                  border: 0;
+                "
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
+
+    <div style="display: flex; justify-content: center">
+      <div
+        id="lol"
+        style="
+          background-color: white;
+          width: 400px;
+          border-radius: 8px;
+          transition: 3s;
+        "
+      ></div>
+    </div>
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-secondary text-light footer mt-5 pt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-4 col-md-6">
+            <h4 class="text-uppercase mb-4">Get In Touch</h4>
+
+            <div class="d-flex align-items-center mb-2">
+              <div class="btn-square bg-dark flex-shrink-0 me-3">
+                <span class="fa fa-phone-alt text-primary"></span>
+              </div>
+              <span>+91984160416/+919488990495</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <div class="btn-square bg-dark flex-shrink-0 me-3">
+                <span class="fa fa-envelope-open text-primary"></span>
+              </div>
+              <span>sparkwebservices2022@gmail.com</span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h4 class="text-uppercase mb-4">Quick Links</h4>
+            <a class="btn btn-link" href="about.html">About Us</a>
+            <a class="btn btn-link" href="contactus.html">Contact Us</a>
+
+            <a class="btn btn-link" href="">Terms & Condition</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h4 class="text-uppercase mb-4">Newsletter</h4>
+            <div class="position-relative mb-4">
+              <input
+                class="form-control border-0 w-100 py-3 ps-4 pe-5"
+                type="text"
+                placeholder="Your email"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                SignUp
+              </button>
+            </div>
+            <div class="d-flex pt-1 m-n1">
+              <a class="btn btn-lg-square btn-dark text-primary m-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-lg-square btn-dark text-primary m-1" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-lg-square btn-dark text-primary m-1" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-lg-square btn-dark text-primary m-1" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-start text-md-start mb-3 mb-md-0">
+              &copy;
+              <a class="border-bottom" href="index.html">Spark Webservices</a>,
+              All Right Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+
+        emailjs.init({
+          publicKey: "TAW4m6nt22_qcFIpl",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_v7vnc62", "template_kk74nup", this).then(
+              () => {
+                console.log("SUCCESS!");
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
